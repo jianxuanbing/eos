@@ -61,14 +61,14 @@ BOOST_FIXTURE_TEST_CASE( get_scope_test, TESTER ) try {
    // create currency 
    auto act = mutable_variant_object()
          ("issuer",       "eosio")
-         ("maximum_supply", eosio::chain::asset::from_string("1000000000.0000 SYS"));
+         ("maximum_supply", eosio::chain::asset::from_string("1000000000.0000 SBC"));
    push_action(N(eosio.token), N(create), N(eosio.token), act );
 
    // issue
    for (account_name a: accs) {
       push_action( N(eosio.token), N(issue), "eosio", mutable_variant_object()
                   ("to",      name(a) )
-                  ("quantity", eosio::chain::asset::from_string("999.0000 SYS") )
+                  ("quantity", eosio::chain::asset::from_string("999.0000 SBC") )
                   ("memo", "")
                   );
    }

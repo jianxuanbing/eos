@@ -1,6 +1,6 @@
 FROM eosio/builder as builder
 ARG branch=master
-ARG symbol=SYS
+ARG symbol=SBC
 
 # 修改git仓库地址
 RUN git clone -b $branch https://github.com/jianxuanbing/eos.git --recursive \

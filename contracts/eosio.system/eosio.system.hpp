@@ -133,6 +133,10 @@ namespace eosiosystem {
 
          eosio_global_state     _gstate;
          rammarket              _rammarket;
+      
+      // Begin: Add By Bing Date:2018-11-21
+      const uint8_t             _maxbp = 3;
+      // End: Add By Bing Date:2018-11-21
 
       public:
          system_contract( account_name s );

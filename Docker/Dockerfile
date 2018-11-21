@@ -1,4 +1,4 @@
-FROM eosio/builder as builder
+FROM bing/builder as builder
 ARG branch=master
 ARG symbol=SBC
 

@@ -21,6 +21,7 @@ services:
       - "8888"
     volumes:
       - nodeos-data-volume:/opt/eosio/bin/data-dir
+      - ./genesis.json:/genesis.json
     cap_add:
       - IPC_LOCK
     stop_grace_period: 10m
@@ -34,6 +35,7 @@ services:
       - nodeosd
     volumes:
       - keosd-data-volume:/opt/eosio/bin/data-dir
+      - ./genesis.json:/genesis.json
     stop_grace_period: 10m
 
 volumes:

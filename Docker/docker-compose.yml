@@ -17,11 +17,8 @@ services:
     ports:
       - 8888:8888
       - 9024:9024
-    expose:
-      - "8888"
     volumes:
       - nodeos-data-volume:/opt/eosio/bin/data-dir
-      - ./genesis.json:/opt/eosio/bin/data-dir/genesis.json
     cap_add:
       - IPC_LOCK
     stop_grace_period: 10m
@@ -35,7 +32,6 @@ services:
       - nodeosd
     volumes:
       - keosd-data-volume:/opt/eosio/bin/data-dir
-      - ./genesis.json:/opt/eosio/bin/data-dir/genesis.json
     stop_grace_period: 10m
 
 volumes:
